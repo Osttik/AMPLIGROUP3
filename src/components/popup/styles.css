@@ -1,0 +1,48 @@
+.popup {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	background-color: #00000061;
+
+	display: flex;
+}
+
+.popupContent {
+	width: 600px;
+	height: 400px;
+	background-color: white;
+	margin: auto;
+	border: 0 solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.confirmationPopup {
+	width: 600px;
+	height: 400px;
+	background-color: white;
+	margin: auto;
+	border: 0 solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.popupTextarea {
+	min-width: 580px;
+	max-width: 580px;
+	min-height: 360px;
+	max-height: 360px;
+	resize: none;
+}
+
+.popupPagination {
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	justify-content: flex-end;
+}

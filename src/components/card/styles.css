@@ -1,0 +1,19 @@
+.card {
+	width: 100%;
+
+	border: 0 solid;
+	border-radius: 5px;
+
+	margin: 5px 0 5px 0;
+
+	background-color: white;
+}
+
+.cardContent {
+	padding: 5px;
+}
+
+.removeSVG {
+	width: 17px;
+	cursor: pointer;
+}
