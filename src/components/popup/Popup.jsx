@@ -8,7 +8,7 @@ class Popup extends React.Component {
 		super(props)
 		
 		this.state = {
-			text: "",
+			text: props.text,
 			canClose: true
 		}
 	}
@@ -40,7 +40,7 @@ class Popup extends React.Component {
 					onMouseLeave={() => this.setState({canClose: true})}
 					className="popupContent"
 				>
-					<textarea onChange={this.handleOnTextChange} id="popupTextarea" className="popupTextarea" />
+					<textarea value={this.state.text} onChange={this.handleOnTextChange} id="popupTextarea" className="popupTextarea" />
 					<div className="popupPagination">
 						<button onClick={this.handleAddCardById}>
 							Add

@@ -23,8 +23,8 @@
 }
 
 .confirmationPopup {
-	width: 600px;
-	height: 400px;
+	width: 400px;
+	height: 100px;
 	background-color: white;
 	margin: auto;
 	border: 0 solid;
@@ -43,6 +43,10 @@
 .popupPagination {
 	display: flex;
 	width: 100%;
-	align-items: flex-end;
-	justify-content: flex-end;
+	justify-content: space-around;
+}
+
+.popupPagination .paginationButton{
+	height: 30px;
+	width: 140px;
 }

@@ -1,8 +1,6 @@
 .content {
 	height: calc(100vh - 60px);
-	width: 100vw;
 
-	/*overflow-x: scroll;*/
 	display: flex;
-	align-items: start;
+	align-items: flex-start;
 }

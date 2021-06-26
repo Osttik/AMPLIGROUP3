@@ -1,3 +1,4 @@
+  
 import React from 'react';
 
 import './styles.css';
@@ -26,10 +27,10 @@ class ConfirmationPopup extends React.Component {
 				>
                     <h3>{this.props.text}</h3>
 					<div className="popupPagination">
-						<button onClick={this.props.close}>
+						<button className="paginationButton" onClick={this.props.close}>
 							Cancel
 						</button>
-						<button onClick={this.props.ok}>
+						<button className="paginationButton" onClick={this.props.ok}>
 							Ok
 						</button>
 					</div>

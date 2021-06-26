@@ -11,9 +11,13 @@
 
 .cardContent {
 	padding: 5px;
+
+	display: flex;
+	justify-content: space-between;
 }
 
 .removeSVG {
 	width: 17px;
 	cursor: pointer;
+	transform: rotate(45deg);
 }

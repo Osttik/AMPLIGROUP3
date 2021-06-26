@@ -49,10 +49,28 @@ export function WriteNewKey(key) {
     storage.setItem(_key, JSON.stringify(itemToSet))
 }
 
+export function DeleteKey(keyToDelete) {
+    const dataFromStorage = storage.getItem(_key)
+
+    const parsedData = JSON.parse(dataFromStorage)
+
+    parsedData.splice(parsedData.findIndex(key => key === keyToDelete), 1)
+
+    storage.removeItem(keyToDelete)
+    
+    storage.setItem(_key, JSON.stringify(parsedData))
+}
+
 export function WriteColumn(column) {
     if (storage.getItem(_key + column.name) === null) {
         WriteNewKey(column.name)
     }
     
     WriteData(column, column.name)
+}
+
+export function ChangeColumnName(column, oldName) {
+    DeleteKey(oldName)
+    
+    WriteColumn(column)
 }
