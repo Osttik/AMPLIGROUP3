@@ -2,25 +2,36 @@ import React from 'react';
 
 import './styles.css';
 
-class Popup extends React.Component {
+interface IProps {
+	text?: string;
+	addNewCard: (value: string) => void;
+	close: () => void;
+}
 
-	constructor(props) {
-		super(props)
+interface IState {
+	text: string;
+	canClose: boolean;
+}
+
+class Popup extends React.Component<IProps, IState> {
+
+	constructor(props: IProps) {
+		super(props);
 		
 		this.state = {
-			text: props.text,
+			text: props.text === undefined ? "" : props.text,
 			canClose: true
-		}
+		};
 	}
 
-	handleOnTextChange = (event) => {
+	handleOnTextChange = (event: { target: { value: string; }; }) => {
 		this.setState({
 			text: event.target.value
-		})
+		});
 	}
 
 	handleAddCardById = () => {
-		const value = document.getElementById("popupTextarea").value
+		const value = (window.document.getElementById("popupTextarea")! as any).value ?? "Error with text";
 
 		this.props.addNewCard(value)
 

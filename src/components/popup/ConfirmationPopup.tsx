@@ -1,10 +1,20 @@
-  
 import React from 'react';
 
 import './styles.css';
 
-class ConfirmationPopup extends React.Component {
-	constructor(props) {
+
+interface IProps {
+	text: string;
+	close: () => void;
+	ok: () => void;
+}
+
+interface IState {
+	canClose: boolean;
+}
+
+class ConfirmationPopup extends React.Component<IProps, IState> {
+	constructor(props: IProps) {
 		super(props)
 		
 		this.state = {

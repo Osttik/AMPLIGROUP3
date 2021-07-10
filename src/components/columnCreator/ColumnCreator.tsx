@@ -4,16 +4,27 @@ import { WriteColumn } from '../../data/dataWorker';
 
 import './styles.css';
 
-export default class Column extends React.Component {
-	constructor(){
-		super();
+interface IProps {
+	AddColumn: (newColumn: {
+		name: string;
+		cards: any[];
+	}) => void;
+}
+
+interface IState {
+	isOpenPopup: boolean;
+}
+
+export default class Column extends React.Component<IProps, IState> {
+	constructor(props: IProps){
+		super(props);
 
 		this.state = {
 			isOpenPopup: false
-		}
+		};
 	}
 
-    addNewColumn = (text) => {
+    addNewColumn = (text: string) => {
         const newColumn = {
 			name: text,
 			cards: []
@@ -40,7 +51,7 @@ export default class Column extends React.Component {
 		return (
 			<div className="columnCreator">
                 <div onClick={this.handleOpenPopup} className="columnCreatorFooter">
-					<svg className="addSVG" viewBox="0 0 24 24"  tabindex="-1" ><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+					<svg className="addSVG" viewBox="0 0 24 24" ><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
 					Add another column
 				</div>
 				{ this.state.isOpenPopup && <Popup close={this.handleClosePopup} addNewCard={this.addNewColumn} /> }
