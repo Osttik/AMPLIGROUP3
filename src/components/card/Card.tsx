@@ -3,7 +3,7 @@ import ConfirmationPopup from '../popup/ConfirmationPopup';
 import Popover from '../popover/Popover';
 import Popup from '../popup/Popup';
 
-import './styles.css';
+import './styles.scss';
 
 interface IProps {
 	text: string;

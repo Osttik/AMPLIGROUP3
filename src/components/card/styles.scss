@@ -1,16 +1,19 @@
+@import '../../index.scss';
+
+
 .card {
 	width: 100%;
 
 	border: 0 solid;
-	border-radius: 5px;
+	border-radius: $pageBorderRadius;
 
-	margin: 5px 0 5px 0;
+	margin: $pagePadding 0 $pagePadding 0;
 
 	background-color: white;
 }
 
 .cardContent {
-	padding: 5px;
+	padding: $pagePadding;
 
 	display: flex;
 	justify-content: space-between;

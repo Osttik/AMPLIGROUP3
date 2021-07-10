@@ -5,7 +5,7 @@ import Popup from '../popup/Popup';
 import ConfirmationColumnPopup from '../popup/ConfirmationColumnPopup';
 import { WriteColumn } from '../../data/dataWorker';
 
-import './styles.css';
+import './styles.scss';
 import '../popup/Popup';
 
 interface IProps {
