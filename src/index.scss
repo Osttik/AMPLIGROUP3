@@ -1,2 +1,73 @@
 $pagePadding: 5px;
 $pageBorderRadius: 5px;
+
+$mainTextColor: white;
+$pageDistance: 20px;
+
+.contentComponent {
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("https://img3.goodfon.ru/wallpaper/nbig/6/44/corno-nero-italy-hills.jpg");
+    background-size: cover;
+
+    //display: flex;
+    //flex-direction: column;
+
+    .headerComponent {
+        height: 50px;
+        padding: $pageDistance;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .informationComponent {
+        flex: 1;
+        padding: $pageDistance;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logo {
+                font-size: 8rem;
+                font-weight: 600;
+            }
+
+            .additionalInformation {
+                font-size: 1.2rem;
+            }
+        }
+
+        .search {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .footerComponent {
+        padding: $pageDistance;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pageIcon {
+        fill:white;
+        height: 50px;
+    }
+
+    .text {
+        color: $mainTextColor;
+    }
+}
